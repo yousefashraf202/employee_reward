@@ -5,7 +5,7 @@ import frappe
 from frappe.model.document import Document
 
 class EffectiveDateNotice(Document):
-    frappe.msgprint(msg="test inside the class validate1111", title="test title")
+    # frappe.msgprint(msg="test inside the class validate1111", title="test title")
 
     def after_save(self):
         frappe.msgprint(msg="test inside the class validate2222", title="test title")

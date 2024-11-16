@@ -134,12 +134,10 @@ fixtures = ["Custom Field"]
 
 doc_events = {
     "Effective Date Notice": {
-        "after_save": "employee_reward.employee_reward.effective_date_notice.effective_date_notice.after_save"
+        "after_save": ".employee_reward.doctype.effective_date_notice.effective_date_notice.after_save"
     },
-    "Reward Allocation": {
-        "after_save": "employee_reward.employee_reward.reward_allocation.reward_allocation.after_save"
-    }
 }
+
 
 
 # Scheduled Tasks
