@@ -134,8 +134,12 @@ fixtures = ["Custom Field"]
 
 doc_events = {
     "Effective Date Notice": {
-        "after_save": ".employee_reward.doctype.effective_date_notice.effective_date_notice.after_save"
+        "after_save": ".employee_reward.doctype.effective_date_notice.effective_date_notice.after_save",
     },
+    "Employee":{
+        "on_submit": ".employee_reward.doctype.effective_date_notice.effective_date_notice.on_submit",
+        "on_cancel": ".employee_reward.doctype.effective_date_notice.effective_date_notice.on_cancel"
+    }
 }
 
 
