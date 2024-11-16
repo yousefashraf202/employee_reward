@@ -1,0 +1,219 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EDN-.YYYY.-.###.",
+ "creation": "2024-11-12 21:06:41.787364",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_msmw",
+  "employee",
+  "employee_name",
+  "date_of_joining",
+  "column_break_lshx",
+  "department",
+  "designation",
+  "nationality",
+  "section_break_xrvr",
+  "start_working_at",
+  "type_of_notice",
+  "current_last_working_date",
+  "column_break_iypv",
+  "last_annual_leave_start_date",
+  "last_annual_leave_end_date",
+  "total_leave_days",
+  "approval_details_section",
+  "supervisor_email",
+  "supervisor_name",
+  "approval_date",
+  "column_break_bdkh",
+  "remarks",
+  "section_break_hhwi",
+  "hr_remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_msmw",
+   "fieldtype": "Section Break",
+   "label": "Employee Info"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Effective Date Notice",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.date_of_joining",
+   "fieldname": "date_of_joining",
+   "fieldtype": "Data",
+   "label": "Date of Joining",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_lshx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.department",
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.nationality",
+   "fieldname": "nationality",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nationality",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_xrvr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "start_working_at",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Start Working At "
+  },
+  {
+   "fieldname": "type_of_notice",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type Of Notice",
+   "options": "\nStarted the work for the first time\nJoined the work after vacation"
+  },
+  {
+   "fieldname": "column_break_iypv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.last_working_date",
+   "fieldname": "current_last_working_date",
+   "fieldtype": "Date",
+   "label": "Current Last Working Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approval_details_section",
+   "fieldtype": "Section Break",
+   "label": "Approval Details"
+  },
+  {
+   "fetch_from": "supervisor_email.full_name",
+   "fieldname": "supervisor_name",
+   "fieldtype": "Data",
+   "label": "Supervisor Name"
+  },
+  {
+   "fetch_from": "employee.leave_approver",
+   "fieldname": "supervisor_email",
+   "fieldtype": "Link",
+   "label": "Supervisor Email",
+   "options": "User"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Approval Date"
+  },
+  {
+   "fieldname": "column_break_bdkh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "section_break_hhwi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "hr_remarks",
+   "fieldtype": "Small Text",
+   "label": "HR Remarks"
+  },
+  {
+   "fieldname": "last_annual_leave_start_date",
+   "fieldtype": "Date",
+   "label": "Last Annual Leave Start Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_annual_leave_end_date",
+   "fieldtype": "Date",
+   "label": "Last Annual Leave End Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_leave_days",
+   "fieldtype": "Float",
+   "label": "Total Leave Days",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-11-13 17:50:03.455387",
+ "modified_by": "Administrator",
+ "module": "Employee Reward",
+ "name": "Effective Date Notice",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
