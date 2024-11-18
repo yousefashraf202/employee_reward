@@ -108,7 +108,8 @@
    "fieldtype": "Date",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Start Working At "
+   "label": "Start Working At ",
+   "reqd": 1
   },
   {
    "fieldname": "type_of_notice",
@@ -147,6 +148,7 @@
    "options": "User"
   },
   {
+   "default": "now",
    "fieldname": "approval_date",
    "fieldtype": "Date",
    "label": "Approval Date"
@@ -191,7 +193,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-13 17:50:03.455387",
+ "modified": "2024-11-17 23:03:38.954798",
  "modified_by": "Administrator",
  "module": "Employee Reward",
  "name": "Effective Date Notice",

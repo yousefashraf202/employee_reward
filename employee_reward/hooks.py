@@ -116,9 +116,10 @@ fixtures = ["Custom Field"]
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
+override_doctype_class = {
 # 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+    "Employee": "employee_reward.overrides.employee.CustomEmployee"
+}
 
 # Document Events
 # ---------------
@@ -132,20 +133,28 @@ fixtures = ["Custom Field"]
 # 	}
 # }
 
-doc_events = {
-    "Effective Date Notice": {
-        "after_save": ".employee_reward.doctype.effective_date_notice.effective_date_notice.after_save",
-    },
-    "Employee":{
-        "on_submit": ".employee_reward.doctype.effective_date_notice.effective_date_notice.on_submit",
-        "on_cancel": ".employee_reward.doctype.effective_date_notice.effective_date_notice.on_cancel"
-    }
-}
+# doc_events = {
+#     "Effective Date Notice": {
+#         "validate": "employee_reward.doctype.effective_date_notice.effective_date_notice.validate",
+#         "on_submit": "employee_reward.doctype.effective_date_notice.effective_date_notice.on_submit",
+#         "on_cancel": "employee_reward.doctype.effective_date_notice.effective_date_notice.on_cancel",
+#     }
+# }
 
 
 
 # Scheduled Tasks
 # ---------------
+
+scheduler_events = {
+    "cron": {
+        "0 0 * * *": [
+            "employee_reward.overrides.employee.run_employee_validations"
+        ],
+    }
+}
+
+
 
 # scheduler_events = {
 # 	"all": [
@@ -164,6 +173,11 @@ doc_events = {
 # 		"employee_reward.tasks.monthly"
 # 	],
 # }
+
+
+
+
+
 
 # Testing
 # -------
